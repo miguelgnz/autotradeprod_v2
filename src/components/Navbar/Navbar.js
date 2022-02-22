@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Squash as Hamburger } from 'hamburger-react';
 
 import classes from './Navbar.module.css';
@@ -68,8 +66,14 @@ const Navbar = () => {
         </a>
       </div>
       <div className={classes.menuIcon} onClick={handleClick}>
-        <FontAwesomeIcon icon={barsClicked ? faXmark : faBars} />
-        {/* <Hamburger size={20} /> */}
+        <Hamburger
+          size={25}
+          toggled={barsClicked}
+          toggle={setBarsClicked}
+          distance='lg'
+          duration={0.4}
+          easing='ease'
+        />
       </div>
       <ul className={navigationClasses}>{navigationItems}</ul>
     </nav>
