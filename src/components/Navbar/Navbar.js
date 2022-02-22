@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Squash as Hamburger } from 'hamburger-react';
 
 import classes from './Navbar.module.css';
 import navbarLogo from '../../assets/logos/navbar-logo.svg';
@@ -11,37 +12,43 @@ const NAV_ITEMS = [
   {
     id: 1,
     title: 'Inicio',
-    url: '/home',
+    url: '/inicio',
   },
   {
     id: 2,
     title: 'Servicios',
-    url: '/services',
+    url: '/servicios',
   },
   {
     id: 3,
     title: 'Catálogo',
-    url: '/catalog',
+    url: '/catalogo',
   },
   {
     id: 4,
     title: 'Contacto',
-    url: '/social',
+    url: '/contacto',
   },
   {
     id: 5,
     title: 'Nosotros',
-    url: '/about',
+    url: '/nosotros',
   },
 ];
 
 const Navbar = () => {
   const [barsClicked, setBarsClicked] = useState(false);
 
+  const handleClick = () => {
+    setBarsClicked(!barsClicked);
+  };
+
   const navigationItems = NAV_ITEMS.map((item) => {
     return (
       <li key={item.id} className={classes.navItem}>
-        <NavLink to={item.url}>{item.title}</NavLink>
+        <NavLink onClick={handleClick} to={item.url}>
+          {item.title}
+        </NavLink>
       </li>
     );
   });
@@ -49,10 +56,6 @@ const Navbar = () => {
   const navigationClasses = barsClicked
     ? `${classes.navItems} ${classes.active}`
     : `${classes.navItems}`;
-
-  const handleClick = () => {
-    setBarsClicked(!barsClicked);
-  };
 
   return (
     <nav>
@@ -66,6 +69,7 @@ const Navbar = () => {
       </div>
       <div className={classes.menuIcon} onClick={handleClick}>
         <FontAwesomeIcon icon={barsClicked ? faXmark : faBars} />
+        {/* <Hamburger size={20} /> */}
       </div>
       <ul className={navigationClasses}>{navigationItems}</ul>
     </nav>
