@@ -163,3 +163,9 @@ nav {
     padding-left: 0px;
   }
 }
+
+@media (max-width: 280px) {
+  .navTitle {
+    display: none;
+  }
+}
