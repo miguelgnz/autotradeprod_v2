@@ -1,7 +1,8 @@
 import React from 'react';
+import CarCard from '../components/CarCard/CarCard';
 
 const Services = () => {
-  return <div>Services</div>;
+  return <CarCard></CarCard>;
 };
 
 export default Services;
