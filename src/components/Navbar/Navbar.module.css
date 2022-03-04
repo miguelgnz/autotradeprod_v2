@@ -118,11 +118,12 @@ nav {
     background: #141e30;
     background: -webkit-linear-gradient(to right, #243b55, #141e30);
     background: linear-gradient(to right, #243b55, #141e30);
+    z-index: 15;
   }
 
   .navItems.active {
     left: 0;
-    z-index: 1;
+    z-index: 15;
     transition: all 0.5s ease;
   }
 

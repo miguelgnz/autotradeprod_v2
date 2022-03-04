@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ImageData } from './image-data';
+import { GiGearStick, GiGasPump } from 'react-icons/gi';
+import { FaTachometerAlt } from 'react-icons/fa';
 
+import { ImageData } from './image-data';
 import classes from './CarCard.module.css';
 
 const CarCard = () => {
@@ -41,9 +43,27 @@ const CarCard = () => {
         );
       })}
       <div className={classes.cardTitles}>
-        <h3>2018</h3>
-        <h1>Toyota Hilux</h1>
-        <h3>Q199,000</h3>
+        <p className={classes.cardTitle} id={classes.carModel}>
+          2018
+        </p>
+        <h3 className={classes.cardTitle} id={classes.carTitle}>
+          TOYOTA HILUX
+        </h3>
+        <p className={classes.cardTitle}>Q199,000</p>
+      </div>
+      <div className={classes.cardIcons}>
+        <div className={classes.cardIconElement}>
+          <GiGearStick className={classes.cardIcon} />
+          <p>Automático</p>
+        </div>
+        <div className={classes.cardIconElement}>
+          <GiGasPump className={classes.cardIcon} />
+          <p>Diesel</p>
+        </div>
+        <div className={classes.cardIconElement}>
+          <FaTachometerAlt className={classes.cardIcon} />
+          <p>25K KM</p>
+        </div>
       </div>
     </div>
   );
