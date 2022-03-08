@@ -1,15 +1,16 @@
-.mainSlider {
-  position: relative;
+.mainCard {
+  /* position: relative; */
+  display: inline-block;
   width: 332px;
   height: 427px;
-  display: block;
+  margin: 15px;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  /* border: 1px solid; */
+  margin: 15px;
   background-color: #0e1726;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: -1;
 }
 
 .sliderImg {

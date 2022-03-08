@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { GiGearStick, GiGasPump } from 'react-icons/gi';
 import { FaTachometerAlt } from 'react-icons/fa';
 
-import { ImageData } from './image-data';
 import classes from './CarCard.module.css';
 
-const CarCard = () => {
+const CarCard = (props) => {
   const [current, setCurrent] = useState(0);
-  const length = ImageData.length;
+  const length = props.slides.length;
+
+  const actualSlides = props.slides;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -25,8 +26,8 @@ const CarCard = () => {
   });
 
   return (
-    <div className={classes.mainSlider}>
-      {ImageData.map((slide, index) => {
+    <div className={classes.mainCard}>
+      {actualSlides.map((slide, index) => {
         return (
           <div
             className={
@@ -37,32 +38,32 @@ const CarCard = () => {
             key={index}
           >
             {index === current && (
-              <img src={slide.url} alt='lel' className={classes.sliderImg} />
+              <img src={slide} alt='lel' className={classes.sliderImg} />
             )}
           </div>
         );
       })}
       <div className={classes.cardTitles}>
         <p className={classes.cardTitle} id={classes.carModel}>
-          2018
+          {props.year}
         </p>
         <h3 className={classes.cardTitle} id={classes.carTitle}>
-          TOYOTA HILUX
+          {props.title}
         </h3>
-        <p className={classes.cardTitle}>Q199,000</p>
+        <p className={classes.cardTitle}>{`Q${props.price}`}</p>
       </div>
       <div className={classes.cardIcons}>
         <div className={classes.cardIconElement}>
           <GiGearStick className={classes.cardIcon} />
-          <p>Automático</p>
+          <p>{props.transmission}</p>
         </div>
         <div className={classes.cardIconElement}>
           <GiGasPump className={classes.cardIcon} />
-          <p>Diesel</p>
+          <p>{props.fuel}</p>
         </div>
         <div className={classes.cardIconElement}>
           <FaTachometerAlt className={classes.cardIcon} />
-          <p>25K KM</p>
+          <p>{`${props.mileage}K KM`}</p>
         </div>
       </div>
     </div>

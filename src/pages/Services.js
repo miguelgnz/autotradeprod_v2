@@ -1,11 +1,10 @@
 import React from 'react';
-import CarCard from '../components/CarCard/CarCard';
+import CarsGrid from '../components/CarsGrid/CarsGrid';
 
 const Services = () => {
   return (
     <div>
-      <h1>CATALOGO</h1>
-      <CarCard></CarCard>;
+      <CarsGrid />
     </div>
   );
 };
