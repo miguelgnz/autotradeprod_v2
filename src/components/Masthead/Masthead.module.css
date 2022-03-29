@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
+}
+
+.mainMasthead {
+  width: 100%;
+  height: 500px;
+  background-image: url('../../assets/backgrounds/masthead.svg');
+  background-size: cover;
+  font-size: 3rem;
+  display: inline-block;
+  max-width: 1519px;
+}
+
+.mastheadText {
+  display: inline-block;
+  height: 100%;
+  width: 45%;
+  text-align: center;
+}
+
+.mastheadText h2 {
+  color: aliceblue;
+}
+
+.mastheadImg {
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 739px);
+}
+
+.mastheadImg img {
+  height: 100%;
+  width: 100%;
+}

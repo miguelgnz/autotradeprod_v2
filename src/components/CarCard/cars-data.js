@@ -52,7 +52,7 @@ export const CarsData = [
     year: 2021,
     transmission: 'Mecánico',
     fuel: 'Gasolina',
-    mileage: '12K KM',
+    mileage: '12',
     price: '225,000',
   },
 ];

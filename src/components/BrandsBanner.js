@@ -5,7 +5,7 @@ import 'car-makes-icons/dist/style.css';
 
 const BrandsBanner = () => {
   return (
-    <div>
+    <div className={classes.mainWrapper}>
       <div className={classes.title}>
         <h2>Las mejores marcas disponibles</h2>
       </div>

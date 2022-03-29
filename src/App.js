@@ -20,6 +20,7 @@ function App() {
           <Route path='/servicios' element={<Services />} />
         </Routes>
       </main>
+      <footer></footer>
     </Fragment>
   );
 }
