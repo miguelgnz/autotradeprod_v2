@@ -8,29 +8,44 @@
   height: 500px;
   background-image: url('../../assets/backgrounds/masthead.svg');
   background-size: cover;
-  font-size: 3rem;
-  display: inline-block;
-  max-width: 1519px;
+  position: relative;
+  z-index: -1;
 }
 
 .mastheadText {
-  display: inline-block;
-  height: 100%;
-  width: 45%;
-  text-align: center;
+  max-width: 600px;
+  padding-top: 120px;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .mastheadText h2 {
   color: aliceblue;
+  font-size: 60px;
 }
 
-.mastheadImg {
-  display: inline-block;
-  height: 100%;
-  width: calc(100% - 739px);
+.mastheadText p {
+  font-size: 16px;
+  max-width: 450px;
+  color: #a1a1a1;
+  margin: 40px 0;
+  font-weight: 300;
+  line-height: 22px;
 }
 
-.mastheadImg img {
-  height: 100%;
-  width: 100%;
+.mainMasthead img {
+  height: 430px;
+  max-width: 732px;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+}
+
+@media (max-width: 1245px) {
+  .mainMasthead img {
+    height: 341px;
+    max-width: 480px;
+    right: 60px;
+    bottom: 15px;
+  }
 }

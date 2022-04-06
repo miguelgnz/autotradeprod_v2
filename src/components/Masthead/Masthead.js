@@ -8,10 +8,12 @@ const Masthead = (props) => {
     <div className={classes.mainMasthead}>
       <div className={classes.mastheadText}>
         <h2>Aseguramos tu compra!</h2>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
       </div>
-      <div className={classes.mastheadImg}>
-        <img alt='masthead' src={car}></img>
-      </div>
+      <img alt='masthead' src={car}></img>
     </div>
   );
 };
