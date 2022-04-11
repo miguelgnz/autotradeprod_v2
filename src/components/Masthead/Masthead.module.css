@@ -45,7 +45,13 @@
   .mainMasthead img {
     height: 341px;
     max-width: 480px;
-    right: 60px;
+    right: 50px;
     bottom: 15px;
+  }
+}
+
+@media (max-width: 960px) {
+  .mastheadText p {
+    max-width: 350px;
   }
 }
