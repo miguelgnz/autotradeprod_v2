@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 
 import classes from './Navbar.module.css';
@@ -58,12 +58,12 @@ const Navbar = () => {
   return (
     <nav>
       <div className={classes.navBrand}>
-        <a href='#'>
-          <img src={navbarLogo} />
-        </a>
-        <a href='#' className={classes.navTitle}>
+        <Link to='/'>
+          <img src={navbarLogo} alt={'logo'}/>
+        </Link>
+        <Link to='/' className={classes.navTitle}>
           AUTOTRADE <span id={classes.afterTitle}>GT</span>
-        </a>
+        </Link>
       </div>
       <div className={classes.menuIcon} onClick={handleClick}>
         <Hamburger
