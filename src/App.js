@@ -16,7 +16,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path='/inicio' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/servicios' element={<Services />} />
         </Routes>
       </main>
