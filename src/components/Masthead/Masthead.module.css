@@ -26,7 +26,7 @@
 
 .mastheadText p {
   font-size: 16px;
-  max-width: 450px;
+  max-width: 400px;
   color: #a1a1a1;
   margin: 40px 0;
   font-weight: 300;
@@ -35,23 +35,40 @@
 
 .mainMasthead img {
   height: 430px;
-  max-width: 732px;
+  max-width: 762px;
   position: absolute;
   right: 100px;
   bottom: 0px;
 }
 
-@media (max-width: 1245px) {
+/*! Probably not useful */
+/* @media (max-width: 1245px) {
   .mainMasthead img {
-    height: 341px;
-    max-width: 480px;
     right: 50px;
     bottom: 15px;
   }
-}
+} */
 
 @media (max-width: 960px) {
+  .mastheadText {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
   .mastheadText p {
-    max-width: 350px;
+    max-width: 214px;
+  }
+
+  .mainMasthead img {
+    height: 341px;
+    max-width: 480px;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .mainMasthead{ 
+    display: inline-block; 
   }
 }

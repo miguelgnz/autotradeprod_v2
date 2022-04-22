@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   {
     id: 1,
     title: 'Inicio',
-    url: '/inicio',
+    url: '/',
   },
   {
     id: 2,
