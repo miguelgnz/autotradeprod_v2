@@ -1,10 +1,11 @@
 import React from 'react';
-import CarsGrid from '../components/CarsGrid/CarsGrid';
+
+import classes from './Pages.module.css'
 
 const Services = () => {
   return (
-    <div>
-      <CarsGrid />
+    <div className={classes.pageTitle}>
+      <h1>Servicios</h1>
     </div>
   );
 };

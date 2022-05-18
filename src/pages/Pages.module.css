@@ -1,0 +1,55 @@
+.pageTitle {
+    position: relative;
+    margin-top: 7%;
+    width: 23%;
+    z-index: -1;
+}
+
+.pageTitle h1 {
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    /* margin: auto; */
+    white-space: nowrap;
+    padding-bottom: 13px;
+    margin-left: 15px;
+  }
+  .pageTitle h1:before {
+    background-color: #c45f00;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    animation: slide 1s ease 0s 1 normal none;;
+  }
+  .pageTitle h1:after {
+    background-color: #c45f00;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    margin-bottom: 0.25em;
+    border-radius: 4px;
+    animation: slide 1s ease 0s 1 normal none;;
+  }
+
+  @keyframes slide {
+      0%{
+        width:0;
+      }
+      50%{
+        width:160px;
+      }
+      100%{
+          width: 100px;
+      }
+  }
